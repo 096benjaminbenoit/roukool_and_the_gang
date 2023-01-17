@@ -9,7 +9,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-top: 20px;
+    padding: 20px 0px;
 
     @media screen and (min-width: 768px) {
         flex-direction: row;
@@ -44,6 +44,76 @@
 
             @media screen and (min-width: 768px) {
                 max-width: 30vw;
+            }
+        }
+    }
+}
+
+.pokemon_container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    &_card {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #47CDAE;
+        width: 150px;
+        height: 100px;
+        border-radius: 15px;
+        margin: 5px;
+        z-index: 1;
+        overflow: hidden;
+
+        &_left {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+
+            &__sprite {
+                height: 55px;
+                position: absolute;
+                margin-top: 10px;
+                margin-left: 0px;
+                z-index: 2;
+            }
+
+            &__pokeball {
+                height: 70px;
+                opacity: 0.5;
+                margin-top: 60px;
+                margin-left: -20px;
+                filter: invert(1);
+            }
+        }
+
+        &_right {
+            &__title {
+                font-size: 12px;
+                color: white;
+            }
+
+            &_type {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background-color: rgba(255, 255, 255, 0.329);
+                border-radius: 15px;
+                width: 80px;
+                margin: 5px;
+
+                &__icon {
+                    height: 15px;
+                    margin-right: 5px;
+
+                }
+
+                &__text {
+                    font-size: 10px;
+                    color: white;
+                }
             }
         }
     }
